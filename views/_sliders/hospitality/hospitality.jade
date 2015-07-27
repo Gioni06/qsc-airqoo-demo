@@ -1,0 +1,4 @@
+- for item in contentful.hospitality_slider
+    - for slide in item.images
+        .item(data-infoheadline='#{slide.fields.infoHeadline}', data-infotext='#{slide.fields.infoText}')
+            img(src!= asset(slide.fields.image,{w: 251, h: 445, q: 80}), alt="#{slide.fields.infoText}")

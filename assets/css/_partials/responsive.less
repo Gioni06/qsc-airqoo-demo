@@ -1,0 +1,156 @@
+@import "../_variables.less";
+.btn-responsive{
+  @media screen and (max-width: @screen-xs-min) {
+    width: 100%;
+  }
+  @media screen and (min-width: @screen-md-max) {
+    width:auto;
+  }
+body, html{
+  overflow-x:hidden!important;
+  -ms-overflow-x: hidden!important;
+}
+body.single-page, html.single-page{
+
+}
+.fp-responsive{
+  margin: 0px;
+  margin-top: 60px;
+  .fp-section{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+
+}
+#mainNavigation{
+//  @media (max-width: @screen-xs-max) {
+//    background-color: #f4f4f4;
+//    margin-bottom: 30px;
+//  }
+//  @media (min-width: @screen-md-min) {
+//    background-color: #f4f4f4;
+//    margin-bottom: 30px;
+//  }
+//  @media (min-width: @screen-lg-min) {
+//    background-color: #ffffff;}
+}
+
+#contactFormContainer{
+  @media (min-width: @screen-sm-min) {
+    position: relative;
+
+  }
+
+  @media (max-width: @screen-md) {
+    position: relative;
+    top: auto;
+  }
+  @media (max-height: 769px) and (min-width: @screen-xs-max) {
+    position: relative;
+    top: auto;
+  }
+
+
+}
+
+/**
+PANELS
+**/
+
+.panel > .panel-heading > h3 {
+  @media (max-width: @screen-xs-max) {
+    font-size: 1.8em!important;
+  }
+}
+
+/**
+NAVIGATION
+**/
+
+.nav {
+  @media (max-width: @screen-xs-max) {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 0;
+    list-style: none;
+    text-align: center;
+  }
+  @media (min-width: @screen-md) {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 0;
+    list-style: none;
+    text-align: center;
+  }
+  
+  @media (max-width: @screen-md-max) {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 0;
+    list-style: none;
+    text-align: center;
+  }
+}
+
+/**
+FOOTER
+**/
+#contactFormContainer{
+  @media (max-width: @screen-md) {
+    padding-bottom: 122px;
+  }
+  @media (min-width: @screen-md-min) {
+    padding-bottom: 122px;
+  }
+}
+.responsive-footer{
+  position: absolute;width: 100%;
+  bottom: 0px;
+  @media (max-width: @screen-xs-max) {
+    #footer-social{
+      display: block;
+    }
+    #footer-terms{
+      display: block;
+    }
+    position: relative;
+  }
+  @media (max-width: @screen-md) {
+    position: absolute;
+  }
+  @media (min-width: @screen-md-min) {
+    position: absolute;
+  }
+
+  @media (max-height: 829px) and (min-width: @screen-xs-max) {
+    #contactFormContainer{
+      padding-bottom: 122px;
+    }
+    #footerBg{
+      //padding: 3px 0px;
+      #footer-social{
+        font-size: 0.9em;
+      }
+      #footer-terms{
+
+      }
+
+      #footer-legal{
+        font-size: 0.9em;
+        padding: 6px 0px 0px 0px;
+      }
+    }
+  }
+}
+
+.last-section > .fp-tableCell{
+
+}
+
+.nav > li > a {
+  @media (max-width: @screen-md) {
+    padding: 17px 5px;
+  }
+}

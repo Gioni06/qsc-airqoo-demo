@@ -1,0 +1,21 @@
+extends layout-single
+
+block meta
+ meta(name='description', content='#{config.glossarItem.description}')
+ meta(name='author', content= "author of the site")
+ title "QSC Airqoo | 404"
+block navbar-button
+  a(href!=config.glossarItem.buttonLink).btn.btn-primary.btn-responsive!=config.glossarItem.buttonText 
+
+block content
+  .container.container-flex
+        .row
+            div.col-md-4.col-md-offset-4.col-xs-12
+              section
+                img(src='img/static/404.svg', alt='404 not found')
+                section.text-center
+                  h3.dark Entschuldigen Sie...
+                  p.lead.dark Diese Seite konnte leider nicht gefunden werden.
+                  a.btn.btn-responsive.btn-primary(href='/') Zurück zur Startseite 
+                           
+                      

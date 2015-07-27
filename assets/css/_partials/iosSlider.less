@@ -1,0 +1,104 @@
+@import "../_variables.less";
+.iphone{
+  background-image: url("../img/iphone@2x.png");
+  position: relative;
+  width: 345px;
+  height: 671.5px;
+  background-origin: content-box;
+  background-size: cover;
+  z-index: 2;
+  @media (max-width: @screen-xs-max) {
+    transform: scale(.7);
+    -webkit-transform: scale(.7);
+    -moz-transform: scale(.7);
+  }
+}
+img {
+  max-width: 100%;
+  -webkit-user-drag: none;
+}
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+  width: 251px;
+  height: 445px;
+  margin: 0 auto;
+}
+
+.iosSlider{
+  position: relative;
+  top: 116px!important;
+  left: 47px!important;
+  overflow: hidden;
+  z-index: 1;
+  width: 251px;
+  height: 445px;
+  background-color: #343434;
+  .slider{
+    width: 251px;
+    margin: 0 auto;
+    .item{
+      width: 291px!important;
+      padding-right: 20px!important;
+      img{
+        width: 251px;
+        height: 445px;
+        margin-right: 20px!important;
+      }
+    }
+  }
+}
+
+
+#backgroundslider{
+  @media (max-width: @screen-xs-max) {
+//    display: none;
+    transform: scale(.7);
+    -webkit-transform: scale(.7);
+    -moz-transform: scale(.7);
+    top: 25%!important;
+    left: 15%!important;
+  }
+  position: absolute!important;
+//  top: 319px!important;
+//  left: 833px!important;
+  top: 36%!important;
+  left: 43.5%!important;
+  overflow: hidden;
+  z-index: 1;
+  width: 251px;
+  height: 445px;
+  overflow: visible!important;
+  margin: 0 auto;
+  overflow: visible!important;
+  .background_slider{
+//    position: relative!important;
+//    width: 400%!important;
+//    height: 445px;
+//    margin: 0 auto;
+//    left: 835px!important;
+    .item{
+
+        margin-left: 40px;
+        margin-right: 40px;
+        &:first-child{
+//          margin-left: 0px;
+//          padding-left: 40px;
+        }
+//      padding-right: 20px!important;
+      img{
+        width: 271px!important;
+        height: 100%;
+        opacity: .1;
+        filter: blur(.5px);
+        -webkit-filter: blur(.5px);
+        -moz-filter: blur(.5px);
+        -o-filter: blur(.5px);
+        -ms-filter: blur(.5px);
+        filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='.5');
+      }
+    }
+  }
+}

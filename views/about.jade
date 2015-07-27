@@ -1,0 +1,386 @@
+extends layout
+
+block meta
+ meta(name='description', content='#{config.about.description}')
+ meta(name='author', content= "author of the site")
+ title= config.index.title
+
+block navbar-button
+  a(href!=config.about.buttonLink).btn.btn-primary.btn-responsive!=config.about.buttonText 
+ 
+block sub-menu
+  nav#secondaryNavigation
+    .container
+      .row
+        .col-xs-12
+          ul#menu.list-inline
+            li About
+
+block content
+  #fp-about
+    #about_start_Bg.section
+      .container
+        .row
+          .col-xs-12
+            h2.dark QSC airqoo “Designed for WiFi”
+          .col-xs-12.col-md-6.col-md-push-6
+            img#desForWiFi.img-responsive(src='img/svg/150413_grafik_bereiche_s1.svg', alt='Bereiche')
+          .col-xs-12.col-md-6.col-md-pull-6
+            p.lead
+             | Freies WiFi oder WLAN findet als kostenloser Kundenservice in Deutschland wie auch international eine inzwischen hohe Verbreitung und hat sich beispielsweise in Cafés, im Einzelhandel, auf Events oder in Hotels als ein extrem populäres und intensiv genutztes Serviceangebot etabliert.
+            p.lead
+             | Freies WiFi muss nicht alleine als Verbindungstechnologie und Alternative zum Mobilfunk verstanden werden, sondern hat das Potential sich als eine intelligente Dialog- und Werbeplattform zu etablieren, die Unternehmen für personalisierte, sichere und interaktive Marketingmaßnahmen nutzen können.
+            p.lead
+             | QSC AG bietet mit der <span class="bold">QSC®-airqoo</span> Familie eine Identity- und Access- Plattform für das Management öffentlicher und/oder privater WiFi Netze an. QSC betreibt dafür eine cloudbasierte, mandantenfähige und in Deutschland gehostete Software Plattform.
+            p.lead
+             | Das Motto „Designed for WiFi” steht für einen hohen Individualisierungsgrad, mit dem Fokus das Geschäftsmodell unseres Kunden optimal zu unterstützen.
+            h4.dark
+             | Design bedeutet für uns, dass wir Kundenwünsche einerseits standardisiert, jedoch auch hoch skalierbar und flexibel auf erfüllen können.
+    #about_two_Bg.section
+      .container
+          .row
+            .col-xs-12
+              h3.dark Leistungsversprechen
+              p.lead
+                | Wir bauen kein QSC WiFi an Standorten unserer Kunden!
+                | Wir bauen ihre WiFi-Lösungen nach ihren Wünschen und beraten Sie gerne.
+            .col-xs-12.col-md-4
+              .panel.feature-panel
+                .panel-heading
+                  h3
+                    | Security &
+                    | Simplicity
+                .panel-body
+                  ul.list-unstyled
+                    li
+                      .row
+                        .col-xs-1
+                          span
+                            i.fa.fa-check
+                        .col-xs-10
+                          p Hoheit über Gültigkeit des Nutzer-Accounts
+                    li
+                      .row
+                        .col-xs-1
+                          span
+                            i.fa.fa-check
+                        .col-xs-10
+                          p Eigene SSID
+                    li
+                      .row
+                        .col-xs-1
+                          span
+                            i.fa.fa-check
+                        .col-xs-10
+                          p
+                            | Per WiFi gesammelten Daten
+                            | „gehören“ dem Kunden und werden durch QSC übergeben
+                    li
+                      .row
+                        .col-xs-1
+                          span
+                            i.fa.fa-check
+                        .col-xs-10
+                          p
+                            | Seamless Log-In durch
+                            | Nutzerkennung
+                    li
+                      .row
+                        .col-xs-1
+                          span
+                            i.fa.fa-check
+                        .col-xs-10
+                          p Umfassende Contentfilter-Funktionen wie Ethik-, und Jugendschutz
+                    li
+                      .row
+                        .col-xs-1
+                          span
+                            i.fa.fa-check
+                        .col-xs-10
+                          p
+                            | Daten bleiben im deutschen
+                            | Rechtsraum
+            .col-xs-12.col-md-4
+              .panel.feature-panel
+                .panel-heading
+                  h3
+                    | Out of the Box &
+                    | Transparency
+                .panel-body
+                  ul.list-unstyled
+                    li
+                      .row
+                        .col-xs-1
+                          span
+                            i.fa.fa-check
+                        .col-xs-10
+                          p CI-konformer Content und entsprechendes Design der Landingpage
+                    li
+                      .row
+                        .col-xs-1
+                          span
+                            i.fa.fa-check
+                        .col-xs-10
+                          p
+                            | Wahl von verschiedenen
+                            | Authentifizierungsmethoden: E-Mail-Auth, SMS-Auth, Social Login
+                    li
+                      .row
+                        .col-xs-1
+                          span
+                            i.fa.fa-check
+                        .col-xs-10
+                          p Freier Zugriff auf ein modulares QSC 360° Portfolio 
+                    li
+                      .row
+                        .col-xs-1
+                          span
+                            i.fa.fa-check
+                        .col-xs-10
+                          p
+                            | Kurze Implementierungszeit und Investitionsschutz durch Adaption vorhandener Infrastruktur
+                    li
+                      .row
+                        .col-xs-1
+                          span
+                            i.fa.fa-check
+                        .col-xs-10
+                          p Keine Priorisierung von QSC Kunden oder Roaming Partnern
+                    li
+                      .row
+                        .col-xs-1
+                          span
+                            i.fa.fa-check
+                        .col-xs-10
+                          p
+                            | White-Label Integration der Authentisierung in vorhandene oder
+                            | geplante Kunden APPs
+            .col-xs-12.col-md-4
+              .panel.feature-panel
+                .panel-heading
+                  h3
+                    | Loyalty &
+                    | Upselling
+                .panel-body
+                  ul.list-unstyled
+                    li
+                      .row
+                        .col-xs-1
+                          span
+                            i.fa.fa-check
+                        .col-xs-10
+                          p
+                            | Integration von Kunden-, Loyalty-, Bonus Credentials in den
+                            | Login-Prozess
+                    li
+                      .row
+                        .col-xs-1
+                          span
+                            i.fa.fa-check
+                        .col-xs-10
+                          p
+                            | Integration von Direktmarketing
+                            | Elementen in die Landingpage
+                    li
+                      .row
+                        .col-xs-1
+                          span
+                            i.fa.fa-check
+                        .col-xs-10
+                          p Anbindung externer CRM-Systeme und Analyse Tools
+                    li
+                      .row
+                        .col-xs-1
+                          span
+                            i.fa.fa-check
+                        .col-xs-10
+                          p
+                            | Erweiterung WLAN als Sensor
+                            | (Customer Insight)
+                    li
+                      .row
+                        .col-xs-1
+                          span
+                            i.fa.fa-check
+                        .col-xs-10
+                          p
+                            | Selfservice Analyse Portal
+                            | (Statistiken und Reports)
+                    li
+                      .row
+                        .col-xs-1
+                          span
+                            i.fa.fa-check
+                        .col-xs-10
+                          p
+                            | Business und Enterprise SLA
+    #about_three_Bg.section
+      .container
+          .row
+            .col-xs-12
+              h3.dark Unsere Product Family Roadmap
+          .row.margin-top
+            .col-xs-12.col-lg-3.col-sm-6
+              img.roadmap-icon.img-responsive(src='img/svg/icon_step1.svg', alt='bubble')
+              section.roadmap
+                dl.list-unstyled
+                  dd
+                    h3.dark airqoo Analytics
+                  dd
+                    .row
+                      .col-xs-1
+                        span
+                          i.fa.fa-star
+                      .col-xs-10
+                        p Sensor gestützte Analyse
+                  dd
+                    .row
+                      .col-xs-1
+                        span
+                          i.fa.fa-star
+                      .col-xs-10
+                        p Storeperformance
+                  dd
+                    .row
+                      .col-xs-1
+                        span
+                          i.fa.fa-star
+                      .col-xs-10
+                        p Kampagnen Steuerung
+                  dd
+                    .row
+                      .col-xs-1
+                        span
+                          i.fa.fa-star
+                      .col-xs-10
+                        p Indoor Navigation
+            .col-xs-12.col-lg-3.col-sm-6
+              img.roadmap-icon.img-responsive(src='img/svg/icon_step2.svg', alt='bubble')
+              section.roadmap
+                dl.list-unstyled
+                  dd
+                    h3.dark airqoo Gateway
+                  dd
+                    .row
+                      .col-xs-1
+                        span
+                          i.fa.fa-star
+                      .col-xs-10
+                        p PaaS
+                  dd
+                    .row
+                      .col-xs-1
+                        span
+                          i.fa.fa-star
+                      .col-xs-10
+                        p Branded Landingpage
+                  dd
+                    .row
+                      .col-xs-1
+                        span
+                          i.fa.fa-star
+                      .col-xs-10
+                        p Access & Identity
+                  dd
+                    .row
+                      .col-xs-1
+                        span
+                          i.fa.fa-star
+                      .col-xs-10
+                        p Sicherheitsfilter
+                  dd
+                    .row
+                      .col-xs-1
+                        span
+                          i.fa.fa-star
+                      .col-xs-10
+                        p Reporting
+                  dd
+                    .row
+                      .col-xs-1
+                        span
+                          i.fa.fa-star
+                      .col-xs-10
+                        p Datenbank
+                  dd
+                    .row
+                      .col-xs-1
+                        span
+                          i.fa.fa-star
+                      .col-xs-10
+                        p Touchpoint Analyse
+                  dd
+                    .row
+                      .col-xs-1
+                        span
+                          i.fa.fa-star
+                      .col-xs-10
+                        p User Journey
+            .col-xs-12.col-lg-3.col-sm-6
+              img.roadmap-icon.img-responsive(src='img/svg/icon_step3.svg', alt='bubble')
+              section.roadmap
+                dl.list-unstyled
+                  dd
+                    h3.dark airqoo CMS & Analytics
+                  dd
+                    .row
+                      .col-xs-1
+                        span
+                          i.fa.fa-star
+                      .col-xs-10
+                        p Custom Customer - Cockpit
+                  dd
+                    .row
+                      .col-xs-1
+                        span
+                          i.fa.fa-star
+                      .col-xs-10
+                        p CMS
+                  dd
+                    .row
+                      .col-xs-1
+                        span
+                          i.fa.fa-star
+                      .col-xs-10
+                        p Gateway Analytics
+            .col-xs-12.col-lg-3.col-sm-6
+              img.roadmap-icon.img-responsive(src='img/svg/icon_step4.svg', alt='bubble')
+              section.roadmap
+                dl.list-unstyled
+                  dd
+                    h3.dark airqoo SAP/OS
+                  dd
+                    .row
+                      .col-xs-1
+                        span
+                          i.fa.fa-star
+                      .col-xs-10
+                        p
+                          | Integration SAP CRM & ERP
+                  dd
+                    .row
+                      .col-xs-1
+                        span
+                          i.fa.fa-star
+                      .col-xs-10
+                        p Live InStore Communication
+                  dd
+                    .row
+                      .col-xs-1
+                        span
+                          i.fa.fa-star
+                      .col-xs-10
+                        p Customer & Retailer
+                  dd
+                    .row
+                      .col-xs-1
+                        span
+                          i.fa.fa-star
+                      .col-xs-10
+                        p
+                          | Datawarehouse- &
+                          | Prozessintegration
+          .row.margin-top
+            .col-xs-12.col-sm-12.col-lg-4.col-lg-offset-4
+              a.btn-primary.btn.btn-block.btn-responsive(href!=config.about.buttonLink)!=config.about.buttonText
+  button.material-scrolltop(type="button")                                           

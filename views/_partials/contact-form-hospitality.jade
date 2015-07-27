@@ -1,0 +1,105 @@
+.row
+  form#contactForm(action='https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8', method='POST', accept-charset="UTF-8")
+    .col-md-6
+      .row
+        .col-xs-12.col-md-6
+          .form-group.form-group-sm
+            label(for="salutation") Anrede 
+            select#salutation.form-control.form-select(name='salutation', title='salutation')
+              option(value='') --Keine Angabe--
+              option(value='Herr') Herr
+              option(value='Frau') Frau
+      .row
+        .col-xs-12.col-md-6
+          .form-group.form-group-sm
+            label(for='first_name') Vorname 
+              small *
+            input#first_name.form-control(name='first_name', type='text', required)
+        .col-xs-12.col-md-6
+          .form-group.form-group-sm
+            label(for='last_name') Name 
+              small *
+            input#last_name.form-control(name='last_name', type='text', required)
+      .row
+        .col-xs-12.col-md-12
+          .form-group.form-group-sm
+            label(for='email') E-Mail 
+              small *
+            input#email.form-control(name='email', type='email', required)
+      .row
+        .col-xs-12.col-md-6
+          .form-group.form-group-sm
+            label(for='phone') Telefon
+            input#phone.form-control(maxlength='40', name='phone', size='20', type='tel')
+        .col-xs-12.col-md-6
+          .form-group.form-group-sm
+            label(for='company') Firma
+            input#company.form-control(name='company', type='text')
+      .row
+        .col-xs-12.col-md-12
+          .form-group.form-group-sm
+            label(for="industry") Branche
+            select.form-control.form-select(name='00ND0000005t5LZ', title='Kunde')
+              option(value='') --Keine Angabe--
+              each option in contact.industries.all
+                option(value=option)=option
+      .row
+        .col-xs-12.col-md-12
+          .form-group.form-group-sm
+            label(for="00ND0000006DHwt") Wieviele Mitarbeiter beschäftigt Ihr Unternehmen?
+            select.form-control.form-select(name='00ND0000006DHwt', title='Anzahl Mitarbeiter')
+              option(value='') --Keine Angabe--
+              each option in contact.employees
+                option(value=option)=option      
+    .col-md-6
+      .row
+        .col-xs-6.col-md-6
+          .form-group.form-group-sm
+            label(for='00ND0000005t5LZ') QSC-Status
+            select.form-control.form-select(name='00ND0000005t5LZ', title='Kunde')
+              option(value='') Keine Angabe
+              option(value='ja') Bereits Kunde
+              option(value='nein') Noch kein Kunde
+        .col-xs-6.col-md-6
+          .form-group.form-group-sm
+            label(for='00ND0000006DHx3') QSC-Status
+            select.form-control.form-select(name='00ND0000006DHx3', title='Kunde')
+              option(value='')  Keine Angabe
+              option(value='Vertriebspartner') Vertriebspartner
+              option(value='Reseller') Reseller
+              option(value='ISP') ISP
+      .row
+        .col-xs-12.col-md-12
+          .form-group.form-group-sm
+            p.small.form-text Nennen Sie uns wenn möglich weitere Details zu Ihrem Projekt / Kunden. Um wie viele Standorte geht es, alternativ wie groß ist die Fläche
+      .row
+        .col-xs-12.col-md-12
+          .form-group.form-group-sm
+            label(for="00ND0000006DHwy") Für wie viele Standorte suchen Sie nach einer Managed-WiFi Lösung?
+            select.form-control.form-select(name='00ND0000006DHwy', title='Standorte Managed WIFI')
+              option(value='') --Keine Angabe--
+              each option in contact.locations
+                option(value=option)=option 
+      .row
+        .col-xs-12.col-md-12
+          .form-group.form-group-sm
+            label(for="00ND0000006DHwt") Wie groß ist die durch Managed-WiFi zu versorgende Fläche?
+            select.form-control.form-select(name='00ND0000006DHwt', title='Fläche Managed WIFI (qm)')
+              option(value='') --Keine Angabe--
+              each option in contact.area
+                option(value=option)=option
+      .row
+        .col-xs-12.col-md-12
+          .form-group.form-group-sm
+            label(for='00N20000000lPfp') Mitteilung
+            textarea#message.form-control(rows='4', name='00N20000000lPfp', cols='50', wrap='soft')
+            
+            input(type='hidden', name='lead_source', value='Airqoo Hospitality')
+            
+            // Generisches Formular
+            input(type='hidden', name='oid', value='00D200000000XB4')
+            input(type='hidden', name='retURL', value='http://')
+            input(type='hidden', name='Campaign_ID', value='701D00000013O54')
+            input#member_status(type='hidden', name='member_status', value='in')
+          .form-group.form-group-sm
+            input.btn.btn-primary.form-control(type='submit', value='Senden', id='submitFormButton')

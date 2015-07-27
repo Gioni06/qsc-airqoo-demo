@@ -1,0 +1,91 @@
+extends layout
+block meta
+    meta(name='description', content='#{config.news.description}')
+    meta(name='author', content= "author of the site")
+    title= config.news.title
+block navbar-button
+    a(href!=config.news.buttonLink).btn.btn-primary.btn-responsive!=config.news.buttonText
+block content
+    div#fp-news(data-ng-app="airqoo-news", data-ng-controller="newsController", data-ng-cloack)
+        div#newsBg.section
+            .container
+                .row
+                    .col-xs-12
+                        .panel.panel-default.panel-horizontal
+                            .panel-heading
+                                h5.dark
+                                    a(data-ng-href="{{items[0].guid[0]['_'] }}", target="_blank") {{items[0].title[0]}}
+                            .panel-body
+                                p.lead.dark.newsText(ng-bind-html="items[0].description[0]")
+                .row.hidden-xs.hidden-sm.visible-md.visible-lg
+                    .col-xs-12
+                        carousel(interval='myInterval')
+                            slide(active='num.active')
+                                .row.item
+                                    .col-xs-12.col-md-3
+                                        .panel
+                                            .panel-body.no-indicator.panel-news
+                                                a(data-ng-href="{{ items[1].guid[0]['_'] }}")
+                                                    img(data-ng-src="{{items[1]['media:text'][0]}}", alt='Geschäftliche E-Mails revisionssicher archivieren')
+                                                h5.dark
+                                                    a(data-ng-href="{{ items[1].guid[0]['_'] }}") {{items[1].title[0]}}
+                                    .col-xs-12.col-md-3
+                                        .panel
+                                            .panel-body.no-indicator.panel-news
+                                                a(data-ng-href="{{ items[2].guid[0]['_'] }}")
+                                                    img(data-ng-src="{{items[2]['media:text'][0]}}", alt='Geschäftliche E-Mails revisionssicher archivieren')
+                                                h5.dark
+                                                    a(data-ng-href="{{ items[2].guid[0]['_'] }}") {{items[2].title[0]}}
+                                    .col-xs-12.col-md-3
+                                        .panel
+                                            .panel-body.no-indicator.panel-news
+                                                a(data-ng-href="{{ items[3].guid[0]['_'] }}")
+                                                    img(data-ng-src="{{items[3]['media:text'][0]}}", alt='Geschäftliche E-Mails revisionssicher archivieren')
+                                                h5.dark
+                                                    a(data-ng-href="{{ items[3].guid[0]['_'] }}") {{items[3].title[0]}}
+                                    .col-xs-12.col-md-3
+                                        .panel
+                                            .panel-body.no-indicator.panel-news
+                                                a(data-ng-href="{{ items[4].guid[0]['_'] }}")
+                                                    img(data-ng-src="{{items[4]['media:text'][0]}}", alt='Geschäftliche E-Mails revisionssicher archivieren')
+                                                h5.dark
+                                                    a(data-ng-href="{{ items[4].guid[0]['_'] }}") {{items[4].title[0]}}
+                            slide()
+                                .row.item
+                                    .col-xs-12.col-md-3
+                                        .panel
+                                            .panel-body.no-indicator.panel-news
+                                                a(data-ng-href="{{ items[5].guid[0]['_'] }}")
+                                                    img(data-ng-src="{{items[5]['media:text'][0]}}", alt='Geschäftliche E-Mails revisionssicher archivieren')
+                                                h5.dark
+                                                    a(data-ng-href="{{ items[5].guid[0]['_'] }}") {{items[5].title[0]}}
+                                    .col-xs-12.col-md-3
+                                        .panel
+                                            .panel-body.no-indicator.panel-news
+                                                a(data-ng-href="{{ items[6].guid[0]['_'] }}")
+                                                    img(data-ng-src="{{items[6]['media:text'][0]}}", alt='Geschäftliche E-Mails revisionssicher archivieren')
+                                                h5.dark
+                                                    a(data-ng-href="{{ items[6].guid[0]['_'] }}") {{items[6].title[0]}}
+                                    .col-xs-12.col-md-3
+                                        .panel
+                                            .panel-body.no-indicator.panel-news
+                                                a(data-ng-href="{{ items[7].guid[0]['_'] }}")
+                                                    img(data-ng-src="{{items[7]['media:text'][0]}}", alt='Geschäftliche E-Mails revisionssicher archivieren')
+                                                h5.dark
+                                                    a(data-ng-href="{{ items[7].guid[0]['_'] }}") {{items[7].title[0]}}
+                                    .col-xs-12.col-md-3
+                                        .panel
+                                            .panel-body.no-indicator.panel-news
+                                                a(data-ng-href="{{ items[8].guid[0]['_'] }}")
+                                                    img(data-ng-src="{{items[8]['media:text'][0]}}", alt='Geschäftliche E-Mails revisionssicher archivieren')
+                                                h5.dark
+                                                    a(data-ng-href="{{ items[8].guid[0]['_'] }}") {{items[8].title[0]}}
+                .row.hidden-md.hidden-lg.visible-xs.visible-sm()
+                    .col-xs-12(data-ng-repeat="small in items")
+                        .media.panel.no-indicator.airqoo-media(data-ng-class="{hidden: $index==0}")
+                            .media-left
+                                a(data-ng-href="{{ small.guid[0]['_'] }}", target="_blank")
+                                    img.media-object(data-ng-src="{{ small['media:text'][0] }}")
+                            .media-body
+                                h5
+                                    a(data-ng-href="{{ small.guid[0]['_'] }}", target="_blank") {{ small.title[0] }}

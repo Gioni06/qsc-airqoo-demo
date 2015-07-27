@@ -1,0 +1,33 @@
+doctype html
+html
+
+  head
+    meta(charset='utf8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge, chrome=1')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    block meta
+    style.
+      #fakeLoader{z-index:99999!important; width: 100%; height:100%; position: absolute; background-color: white;opacity:1; width: 100vw; height: 100vh;}
+
+  body.single-page(data-ng-app="airqoo", data-spy="scroll", data-target="#myScrollspy", data-ng-controller="glossarController")
+    #fakeLoader
+    include _partials/navbar.jade
+    block sub-menu
+    block content
+    link(href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900', rel='stylesheet', type='text/css')
+    != css()
+    != config_js()
+    script(src="js/build.js")
+    != js()
+    script.
+      var loader = $('#fakeLoader');
+      setTimeout(function(){
+        loader.fadeTo('fast',0,'swing',function(){
+        $("body").animate({marginTop: "150px"},200);
+        loader.remove();
+        });
+      },300);
+    if env == 'production'  
+      include _google-analytics-live.jade
+    else
+      include _google-analytics.jade 

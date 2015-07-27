@@ -1,0 +1,23 @@
+@import "../_variables.less";
+.btn{
+  border: none!important;
+  @media (max-width: @screen-xs) {
+
+  }
+}
+.btn-primary{
+  background-color: rgb(255,64,0);
+  color: white;
+  &:hover{
+    background-color: darken(rgb(255,64,0), 10);
+  }
+}
+
+.btn-default{
+  background-color: #666666;
+  color: white;
+  &:hover{
+    background-color: darken(#666666, 10);
+    color: white;
+  }
+}

@@ -1,0 +1,111 @@
+extends layout
+
+block meta
+ meta(name='description', content='#{config.corporate.description}')
+ meta(name='author', content= "author of the site")
+ title= config.corporate.title
+block navbar-button
+  a(href!=config.corporate.buttonLink).btn.btn-primary.btn-responsive!=config.corporate.buttonText
+block sub-menu
+  nav#secondaryNavigation
+    .container
+      .row
+        .col-xs-12
+          ul#menu.list-inline
+            li(data-menuanchor='corporate') Corporate Lösungen
+ 
+block content
+  div#fp-corporate
+    #corporate_start_Bg.section
+      .container
+        .row
+          .col-md-12.col-lg-12.col-sm-12
+            .panel.panel-default.panel-horizontal
+              .panel-heading
+                h3.dark Online - einfach und sicher
+              .panel-body
+                p.lead.dark
+                  | Bieten Sie ihren Besuchern einen state-of-the-art Public-WiFi Service an. Das <span class="bold">airqoo® GATEWAY</span> liefert Ihnen hierfür alle Optionen, angefangen von verschiedenen Authentifizierungsmöglichkeiten die der Nutzer im Selfservice bedienen kann, umfangreiche Sicherheitsfeatures wie Port-, URL, oder Contentfilter, bis zur nahtlosen Integration in Ihre schon existierende WiFi Infrastruktur um ihre getätigten Investitionen zu schützen.
+
+
+                h4.dark Wir realisieren und betreiben professionelle WiFi-Lösungen
+
+     #retail_two_Bg.section
+      #backgroundslider
+        .background_slider()
+          include _sliders/corporate/corporate.jade
+      .iphone.device
+        .shoutOutBox.hidden-sm.hidden-xs
+          section
+            header
+              h4.infoHeadline Lorem Ipsum 1
+            main
+              p.infoText Lorem Ipsum Dolor Sit, Lorem Ipsum Dolor Sit, Lorem Ipsum Dolor Sit
+        .iosSlider
+          .slider
+            include _sliders/corporate/corporate.jade
+        .pagination-bar
+          .pagination-bar-outer
+            .pagination-bar-inner
+              .pagination-bar-content
+                .pagination-bar-handle
+        .shoutOutBox.shoutOutBoxResponsive.visible-xs.visible-sm.hidden-md.hidden-lg
+          section
+            header
+              h4.infoHeadline Lorem Ipsum 1
+            main
+              p.infoText Lorem Ipsum Dolor Sit, Lorem Ipsum Dolor Sit, Lorem Ipsum Dolor Sit
+    #retail_three_Bg.section
+      .container
+        .row
+          .col-md-7.col-lg-7
+            .panel
+              .panel-heading
+                //h5 Feature
+                h3.dark WiFi as a Service
+              .panel-body
+                p.lead.dark.
+                  Public-WiFi ist weltweit die Nummer 1 der gewünschten Gratisservices.
+                p.lead.dark
+                  | Sie betreiben schon Ihr eigenes Corporate-WiFi und suchen einen Dienstleister für das „öffentliche“ Gäste-WiFi?
+                  | Sie möchten Ihren Mitarbeitern die Möglichkeit geben die privaten Endgeräte über Ihre WiFi-Infrastruktur mit dem Internet zu verbinden, um deren Mobilfunk Datenkontingente zu schonen?
+                p.lead.dark.
+                  Mit den <span class="bold">QSC®-airqoo Managed Services</span> integrieren wir ihre individuelle Public-WiFi-Lösung. Technisch auf höchstem Niveau, sicher, skalierbar und einem Carrier-Grade Servicelevel inklusive.
+                p.lead.dark.
+                  Sprechen Sie uns an, wir beraten Sie umfassend.
+
+                h5 Weitere Details
+                .featureIcon(data-hint='VoIP Shoptelefonie')
+                  a(href='#', data-toggle='tooltip', data-placement='top', title='Security (Intelligente Internetfilter)')
+                    span
+                      img(src='img/svg/150401_AQ_icon_content_filter_safety.svg', alt='feature')
+                .featureIcon(data-hint='Couponing & Loyalty Integration')
+                  a(href='#', data-toggle='tooltip', data-placement='top', title='Managed Service (Carrier SLA)')
+                    span
+                      img(src='img/svg/150401_AQ_icon_managedservice.svg', alt='feature')
+                .featureIcon(data-hint='Beacon & Indoor Navigation')
+                  a(href='#', data-toggle='tooltip', data-placement='top', title='WiFi Private (Integration in die Corporate WiFi Struktur)')
+                    span
+                      img(src='img/svg/150401_AQ_icon_wifi.svg', alt='feature')
+                .featureIcon(data-hint='Analytics & Monitoring')
+                  a(href='#', data-toggle='tooltip', data-placement='top', title='Analytics (Statistiken, Transparenz der Nutzung)')
+                    span
+                      img(src='img/svg/150401_AQ_icon_analytics.svg', alt='feature')
+            a.forward.btn.btn-primary.btn-responsive(href='#') Mehr Erfahren
+          .col-md-5.col-lg-5.hidden-xs.hidden-sm
+            img.img.img-responsive(src='img/static/corp_hosp_feature.png', alt='feature')                             
+    
+    div#contactBg.section.last-section
+      #contactFormContainer.container
+        .row
+          .col-md-12
+            .row
+              .col-md-12
+                h3.dark Kontakt
+                p.small Sie haben Fragen, wünschen eine Beratung oder Produktinformationen? Nutzen Sie das Formular für die Kontaktaufnahme mit uns und wir setzen uns schnellstmöglich mit Ihnen in Verbindung. 
+                  span.bold Bitte füllen Sie die mit einem (Pflichtfeld) gekennzeichneten Felder aus. Weitere Angaben helfen uns Ihre Anfrage an den richtigen Gesprächspartner weiterzuleiten. Sämtliche Daten werden streng vertraulich behandelt.
+            include _partials/contact-form-corporate.jade      
+      .responsive-footer
+        include _partials/large-footer.jade
+  include _partials/contact-form-modal.jade      
+  button.material-scrolltop(type="button") 

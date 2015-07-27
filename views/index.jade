@@ -1,0 +1,132 @@
+extends layout
+
+block meta
+ meta(name='description', content='#{config.index.description}')
+ meta(name='author', content= "author of the site")
+ title= config.index.title
+
+block navbar-button
+  a(href!=config.index.buttonLink).btn.btn-primary.btn-responsive!=config.index.buttonText 
+ 
+block sub-menu
+  nav#secondaryNavigation
+    .container
+      .row
+        .col-xs-12
+          ul#menu.list-inline
+            li(data-menuanchor='retail')
+              a(href='#retail') Retail
+            li(data-menuanchor='corporate')
+              a(href='#corporate') Corporate
+            li(data-menuanchor='hospitality')
+              a(href='#hospitality') Hospitality
+            li.hidden(data-menuanchor='contact')
+              a(href='#Kontakt') Kontakt
+ 
+block content
+  div#index
+    div#startBg.section
+      div#landingPage.container
+        .row
+          .col-md-6.col-lg-6
+            .panel
+              .panel-heading
+                h3.dark Designed for WiFi
+              .panel-body
+                p.lead.dark
+                  | Mit dem <span class="bold">QSC®-airqoo Portfolio</span> bietet QSC umfangreiche Managed-Services für die Implementierung, den Betrieb und das Management privater und öffentlicher WiFi-Netze an.
+                p.lead.dark
+                  | Durch die modulare Lösungsstruktur realisieren wir mit den <span class="bold">airqoo® Modulen</span> individuelle und skalierbare WiFi-Szenarien bei unseren Kunden, die trotz der hohen Flexibilität standardisiert und mit hoher Qualität umgesetzt werden.
+
+                p.lead.dark
+                  | Auf Basis der zentralen Managementplattform <span class="bold">airqoo® GATEWAY</span> stellen wir branchenspezifischen Nutzen in den Mittelpunkt.
+
+
+            .intro-button
+              a.btn.btn-primary.hidden-xs(href='#retail') Retail
+              a.btn.btn-primary.hidden-xs(href='#corporate') Corporate
+              a.btn.btn-primary.hidden-xs(href='#hospitality') Hospitality
+              a.btn.btn-block.btn-primary.visible-xs.hidden-sm.hidden-md.hidden-lg(href='#retail') Retail
+              a.btn.btn-block.btn-primary.visible-xs.hidden-sm.hidden-md.hidden-lg(href='#corporate') Corporate
+              a.btn.btn-block.btn-primary.visible-xs.hidden-sm.hidden-md.hidden-lg(href='#hospitality') Hospitality
+      div#bannerBottom.bannerBottom
+        .container
+          .row
+            .col-md-6.col-lg-6
+              p.lead
+                | Wir bauen WiFi-Lösungen für unsere Kunden und im Namen unserer Kunden.
+    div#retailBg.section
+      .container
+        .row
+          .col-md-6.col-lg-6
+            .panel
+              .panel-heading
+                //h5 Retail
+                h3.dark Omnichannel enabled
+              .panel-body
+                p.lead.dark
+                  | Die Verknüpfung der „Offline“ und „Online“ Welt ist die Zukunft des stationären Handels - global.
+                p.lead.dark
+                  | Der Aufbau von intelligenten Kunden CRM-Systemen in Kombination mit Public-WiFi am Point-of-Sale ermöglichen es dem Endkunden auf multiple Art und Weise mit Marken oder Produkten zu interagieren - direkt auf seinem Endgerät.
+                p.lead.dark
+                  | Die <span class="bold">airqoo® Management Plattform</span> ermöglicht all das und noch viel mehr.
+                h5.dark
+                  | Neue Erlebnisse und Services für Kunden und gesteigerte Transparenz für den Händler.
+
+
+
+            a.btn.btn-responsive.btn-primary(href="retail.html") Zu unseren Retail Lösungen
+    div#corporateBg.section
+      .container
+        .row
+          .col-md-6.col-lg-6
+            .panel
+              .panel-heading
+                //h5 Corporate
+                h3.dark Relationship Management at its best
+              .panel-body
+                p.lead.dark
+                  | Public-WiFi ist weltweit die Nummer 1 der gewünschten Gratisservices im stationären Handel.
+                p.lead.dark
+                  | Mit den <span class="bold">QSC®-airqoo Managed-WiFi Services</span> setzen Sie für Ihre Gäste und Besucher, sowie für Mitarbeiter neue Maßstäbe hinsichtlich Bedienbarkeit und Service.
+                p.lead.dark
+                  | Die <span class="bold">QSC®-airqoo Module</span> sind skalierbar ausgelegt und wachsen mit ihren Anforderungen. Ausserdem können diese problemlos in ihre bestehende Infrastruktur integriert werden.
+                p.lead.dark
+                  | Die zentrale Cloud-Plattform <span class="bold">airqoo® GATEWAY</span> erlaubt die intelligente Steuerung Ihrer individuellen WiFi Lösungen, jederzeit skalierbar und sicher - egal ob ein oder mehrere Standorte.
+                //h5.dark
+                //  | WiFi ist Gastfreundlichkeit und Service.
+
+
+             a.btn.btn-responsive.btn-primary(href="corporate.html") Zu unseren Corporate Lösungen
+    div#hospitalityBg.section
+      .container
+        .row
+          .col-md-6.col-lg-6
+            .panel
+              .panel-heading
+                //h5 Hospitality
+                h3.dark WiFi Service - simple & smart
+              .panel-body
+                p.lead.dark
+                  | Public-WiFi zählt in Hotels und Flughäfen zum de-facto Standard. Krankenhäuser, Museen, Messe- und Kongressveranstalter gehören genauso, wie Kinos und Sportstätten zu den prädestinierten Standorten für ein Public-WiFi Angebot.
+                p.lead.dark
+                  | Mit der <span class="bold">QSC®-airqoo Management-Plattform</span> erschließen wir eine neue Dimension im Kundendialog. Standortbezogenes Sponsoring, Feedback direkt vom Endgerät Ihres Gastes. Individuelle Landingpages in ihrem Look & Feel, Integration von Inhalten ihrer Website sind nur einige Leistungsmerkmale.
+                p.lead.dark
+                  | Erschließen Sie mit den <span class="bold">QSC®-airqoo Modulen</span> ungenutzte Potentiale an Ihrem Standort.
+
+             a.btn.btn-responsive.btn-primary(href='hospitality.html') Zu unseren Hospitality Lösungen
+    div#contactBg.section.last-section
+      #contactFormContainer.container
+        .row
+          .col-md-12
+            .row
+              .col-md-12
+                h3.dark Kontakt
+                p.small Sie haben Fragen, wünschen eine Beratung oder Produktinformationen? Nutzen Sie das Formular für die Kontaktaufnahme mit uns und wir setzen uns schnellstmöglich mit Ihnen in Verbindung. 
+                  span.bold Bitte füllen Sie die mit einem (Pflichtfeld) gekennzeichneten Felder aus. Weitere Angaben helfen uns Ihre Anfrage an den richtigen Gesprächspartner weiterzuleiten. Sämtliche Daten werden streng vertraulich behandelt.
+            include _partials/contact-form-index.jade      
+      .responsive-footer
+        div#large-responsive-footer
+          include _partials/large-footer.jade
+  include _partials/contact-form-modal.jade        
+  button.material-scrolltop(type="button") 

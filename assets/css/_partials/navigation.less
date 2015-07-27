@@ -1,0 +1,62 @@
+@import "../_variables.less";
+#mainNavigation{
+  background-color: #ffffff;
+}
+
+
+.navbar-brand{
+  float: left;
+  padding: 12.5px 0px;
+  font-size: 20px;
+  line-height: 22px;
+      svg{
+        position: relative;
+        height: 29px;
+        width: 168px;
+
+      }
+    }
+
+.nav > li > a {
+  color: rgb(100,100,100);
+  &:hover{
+    color: rgb(255,64,0)
+}
+}
+.navbar-toggle{
+  span{
+    background-color: @brand-primary;
+  }
+}
+
+.fillBG{
+  transition-property: all;
+  transition-duration: .5s;
+  transition-timing-function: linear;
+  transition-delay: .5s;
+  background-color: #ffffff!important;
+  .nav > li > a {
+    color: @gray;
+    font-family: 'Roboto', sans-serif;
+  }
+}
+
+//nav{
+//  *{
+//    transition-property: all;
+//    transition-duration: .5s;
+//    transition-timing-function: linear;
+//  }
+//
+//}
+.bnt-overlay{
+  background-color: transparent;
+  border: 1px solid rgb(255,64,0);
+  color: rgb(255,64,0);
+  transition-property: all;
+  transition-duration: .5s;
+  transition-timing-function: linear;
+  &:hover{
+    background-color: rgba(0, 0, 0, 0.20);
+  }
+}

@@ -1,0 +1,8 @@
+// Contextual backgrounds
+@import (reference) "../../../../css/_variables.less";
+.bg-variant(@color) {
+  background-color: @color;
+  a&:hover {
+    background-color: darken(@color, 10%);
+  }
+}

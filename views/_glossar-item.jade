@@ -1,0 +1,37 @@
+extends layout-single
+
+block meta
+ meta(name='description', content='#{config.glossarItem.description}')
+ meta(name='author', content= "author of the site")
+ title!="QSC Airqoo | " + entry.title
+
+block navbar-button
+  a(href!=config.glossarItem.buttonLink).btn.btn-primary.btn-responsive!=config.glossarItem.buttonText 
+
+block content
+  .container.container-flex
+        .row
+          .col-md-12(style='background-color: white; padding: 30px')
+            div
+              section
+                article
+                  .row
+                    .col-md-10.col-md-offset-1
+                      h3.dark=entry.title
+                  if entry.image   
+                    .row
+                      .col-md-10.col-md-offset-1
+                        img.img.img-responsive.thumbnail(src!= asset(entry.image,{w: 920}))    
+                  .row
+                    .col-md-10.col-md-offset-1
+                      div
+                        :markdown=entry.content
+                  .row
+                    .col-md-10.col-md-offset-1
+                      br
+                      hr
+                  .row
+                    .col-md-10.col-md-offset-1
+                      br
+                      a.btn.btn-sm.btn-primary(href='/glossar.html') Zurück zum Glossar              
+                      

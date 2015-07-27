@@ -1,0 +1,112 @@
+extends layout
+
+block meta
+ meta(name='description', content='#{config.hospitality.description}')
+ meta(name='author', content= "author of the site")
+ title= config.hospitality.title
+block navbar-button
+  a(href!=config.hospitality.buttonLink).btn.btn-primary.btn-responsive!=config.hospitality.buttonText
+block sub-menu
+  nav#secondaryNavigation
+    .container
+      .row
+        .col-xs-12
+          ul#menu.list-inline
+            li(data-menuanchor='hospitality') Hospitality Lösungen
+ 
+block content
+  div#fp-hospitality
+    #hospitality_start_Bg.section
+      .container
+        .row
+          .col-md-12.col-lg-12.col-sm-12
+            .panel.panel-default.panel-horizontal
+              .panel-heading
+                h3.dark Ihre Kunden mögen es smart und unkompliziert.
+              .panel-body
+                p.lead.dark.
+                    Begrüßen Sie Ihre Gäste auf Ihrer individuellen Landingpage. Um online gehen zu können hat der Nutzer verschiedene Authentifizierungsmöglichkeiten zur Auswahl, einfaches Self-Check-In inklusive.
+                p.lead.dark.
+                    Integrieren Sie zum Beispiel Informationen zu lokalen Events, gastronomische Angebote oder digitalisieren Sie Ihre Gäste-Zufriedenheitsabfrage auf der Public-WiFi Landingpage und optimieren Sie ihre Kundenfeedback-Rate.
+                h4.dark Intelligente WiFi Lösungen mit QSC®-airqoo
+
+     #retail_two_Bg.section
+      #backgroundslider
+        .background_slider()
+          include _sliders/hospitality/hospitality.jade
+      .iphone.device
+        .shoutOutBox.hidden-sm.hidden-xs
+          section
+            header
+              h4.infoHeadline Lorem Ipsum 1
+            main
+              p.infoText Lorem Ipsum Dolor Sit, Lorem Ipsum Dolor Sit, Lorem Ipsum Dolor Sit
+        .iosSlider
+          .slider
+            include _sliders/hospitality/hospitality.jade
+        .pagination-bar
+          .pagination-bar-outer
+            .pagination-bar-inner
+              .pagination-bar-content
+                .pagination-bar-handle
+        .shoutOutBox.shoutOutBoxResponsive.visible-xs.visible-sm.hidden-md.hidden-lg
+          section
+            header
+              h4.infoHeadline Lorem Ipsum 1
+            main
+              p.infoText Lorem Ipsum Dolor Sit, Lorem Ipsum Dolor Sit, Lorem Ipsum Dolor Sit
+    #retail_three_Bg.section
+      .container
+        .row
+          .col-md-5.col-lg-5.hidden-xs.hidden-sm
+            img.img.img-responsive(src='img/static/corp_hosp_feature.png', alt='feature')
+          .col-md-7.col-lg-7
+            .panel
+              .panel-heading
+                //h5 Feature
+                h3.dark QSC®-airqoo bedeutet WiFi unter Ihrer Kontrolle
+               .panel-body
+                p.lead.dark.
+                    Sie haben jederzeit die Hoheit über Ihren Public-WiFi Service. Dies betrifft insbesondere die Kennung Ihres WiFi Netzes (SSID), das Design und den Inhalt ihrer Landingpage.
+                    Entscheiden Sie gemäß ihrer Anforderungen und ihrer Ideen, wie Sie ihre Kunden zukünftig ansprechen wollen:
+                p.lead.dark.
+                    Integration der WiFi-Authentifizierung in ihre Kunden-App
+                p.lead.dark.
+                    Dynamische Einbettung lokaler Angebote zu Events, Veranstaltungen oder Sponsoring Partner?
+                p.lead.dark.
+                    Erhebung von Kundendaten wie z.B. E-Mail Adresse Abfrage von Kunden Zufriedenheit und Service Qualität u.v.m.
+                h4.dark Intelligente WiFi Lösungen mit QSC®-airqoo
+                h5 Weitere Features
+                .featureIcon(data-hint='VoIP Shoptelefonie')
+                  a(href='#', data-toggle='tooltip', data-placement='top', title='Sicherer Internetzugang (Intelligente Internetfilter)')
+                    span
+                      img(src='img/svg/150401_AQ_icon_content_filter_safety.svg', alt='feature')
+                .featureIcon(data-hint='Couponing & Loyalty Integration')
+                  a(href='#', data-toggle='tooltip', data-placement='top', title='CRM (rechtssichere Abfrage von Kundendaten und Integration in CRM-Systeme)')
+                    span
+                      img(src='img/svg/150401_AQ_icon_crm.svg', alt='feature')
+                .featureIcon(data-hint='Beacon & Indoor Navigation')
+                  a(href='#', data-toggle='tooltip', data-placement='top', title='Managed Service (Carrier SLA)')
+                    span
+                      img(src='img/svg/150401_AQ_icon_managedservice.svg', alt='feature')
+                .featureIcon(data-hint='Analytics & Monitoring')
+                  a(href='#', data-toggle='tooltip', data-placement='top', title='Analytics (Statistiken, Transparents der Nutzung)')
+                    span
+                      img(src='img/svg/150401_AQ_icon_analytics.svg', alt='feature')
+            a.forward.btn.btn-primary.btn-responsive(href='#') Mehr Erfahren                                   
+    
+    div#contactBg.section.last-section
+      #contactFormContainer.container
+        .row
+          .col-md-12
+            .row
+              .col-md-12
+                h3.dark Kontakt
+                p.small Sie haben Fragen, wünschen eine Beratung oder Produktinformationen? Nutzen Sie das Formular für die Kontaktaufnahme mit uns und wir setzen uns schnellstmöglich mit Ihnen in Verbindung. 
+                  span.bold Bitte füllen Sie die mit einem (Pflichtfeld) gekennzeichneten Felder aus. Weitere Angaben helfen uns Ihre Anfrage an den richtigen Gesprächspartner weiterzuleiten. Sämtliche Daten werden streng vertraulich behandelt.
+            include _partials/contact-form-hospitality.jade      
+      .responsive-footer
+        include _partials/large-footer.jade
+  include _partials/contact-form-modal.jade      
+  button.material-scrolltop(type="button")       
+  

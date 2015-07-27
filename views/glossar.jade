@@ -1,0 +1,45 @@
+extends layout-glossar
+
+block meta
+  meta(name='description', content='#{config.glossar.description}')
+  meta(name='author', content= "author of the site")
+  title= config.glossar.title
+  script!= "window.glossarItemsRaw = " + JSON.stringify(contentful.glossar_items)
+
+block navbar-button
+  a(href!=config.glossar.buttonLink).btn.btn-primary.btn-responsive!=config.glossar.buttonText 
+ 
+block sub-menu
+  #searchbar
+    .container
+      .row
+        .col-xs-12
+          i.fa.fa-search
+          input(data-ng-model='searchTerm', type='search', placeholder='Suchen..')
+ 
+block content
+  .container
+    .row
+      .col-xs-12.col-md-8
+        .row(data-ng-repeat='(key, val) in items | filter:searchTerm', data-ng-cloak='')
+          section.col-xs-12(id='{{ val.slug }}', data-ng-cloak='')
+            article.glossarItem(data-ng-animate="'animate'", data-class='anchor animate-repeat')
+              h4.dark(style='word-wrap: break-word;')
+                a(data-ng-href='{{ val._url }}', data-ng-cloak="") {{val.title}}
+              hr  
+              div.excerpt(data-ng-bind-html="val.excerpt | highlight:searchTerm")
+              hr
+              
+      .col-md-4.hidden-sm.hidden-xs
+        nav#myScrollspy.anchor.bs-docs-sidebar
+          ul.nav.bs-docs-sidenav(data-spy='affix')
+            li.affix(data-ng-repeat='(key , val) in items | filter:searchTerm', data-ng-cloak='')
+              a.mainCatAffix.hidden(href!='#{{ val.slug }}') {{val.title}}
+              ul
+                li.nav.animate-repeat(data-ng-animate="'animate'")
+                  a.nav-ancor(href!='#{{ val.slug }}') {{val.title}}
+    .row
+      .col-xs-12.col-md-8
+        include _partials/small-footer.jade
+  button.material-scrolltop(type="button")                          
+  

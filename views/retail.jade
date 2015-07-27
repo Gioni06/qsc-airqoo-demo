@@ -1,0 +1,144 @@
+extends layout
+
+block meta
+ meta(name='description', content='#{config.retail.description}')
+ meta(name='author', content= "author of the site")
+ title= config.retail.title
+block navbar-button
+  a(href!=config.retail.buttonLink).btn.btn-primary.btn-responsive!=config.retail.buttonText
+block sub-menu
+  nav#secondaryNavigation
+    .container
+      .row
+        .col-xs-12
+          ul#menu.list-inline
+            li(data-menuanchor='retail') Retail Lösungen
+ 
+block content
+  div#fp-retail
+    #retail_start_Bg.section
+      .container
+        .row
+          .col-md-12.col-lg-12.col-sm-12
+            .panel.panel-default.panel-horizontal
+              .panel-heading
+                h3.dark Die Zukunft des POS ist digital
+              .panel-body
+                p.lead.dark
+                  | Eine individuelle Landingpage für Ihr Unternehmen ist der Einstieg in den Dialog mit ihrem Kunden am Point-of-Sale.
+                p.lead.dark
+                  | Die Nutzer-Authentifizierung auf der Landingpage kann über Schnittstellen des <span class="bold">airqoo® GATEWAYs</span> direkt an Ihr CRM-System gekoppelt werden. Der Nutzer meldet sich einfach mit den schon existierenden Webshop-Account oder seiner Loyalty-Card Kennung an. Alternativ kann der Nutzer auch seine Logindaten der Social-Media Plattformen verwendet werden.
+                p.lead.dark
+                  | Fügen Sie weitere Dienste aus dem <span class="bold">airqoo® Portfolio</span> hinzu: z.B. Customer Analytics mit Besucher- und Zonenanalyse zur Marketingeffizienzmessung oder informieren Sie ihre Kunden pro-aktiv durch den Einsatz der Beacon-Technologie.
+
+                h4.dark Omnichannel im Handel ist die Zukunft
+     #retail_two_Bg.section
+      #backgroundslider
+        .background_slider()
+          include _sliders/retail/retail.jade
+      .iphone.device
+        .shoutOutBox.hidden-sm.hidden-xs
+          section
+            header
+              h4.infoHeadline Lorem Ipsum 1
+            main
+              p.infoText Lorem Ipsum Dolor Sit, Lorem Ipsum Dolor Sit, Lorem Ipsum Dolor Sit
+        .iosSlider
+          .slider
+            include _sliders/retail/retail.jade
+        .pagination-bar
+          .pagination-bar-outer
+            .pagination-bar-inner
+              .pagination-bar-content
+                .pagination-bar-handle
+        .shoutOutBox.shoutOutBoxResponsive.visible-xs.visible-sm.hidden-md.hidden-lg
+          section
+            header
+              h4.infoHeadline Lorem Ipsum 1
+            main
+              p.infoText Lorem Ipsum Dolor Sit, Lorem Ipsum Dolor Sit, Lorem Ipsum Dolor Sit
+    #retail_three_Bg.section
+      .container
+        .row
+          .col-md-5.col-lg-5.hidden-xs.hidden-sm
+            img.img.img-responsive(src='img/static/retail_feature.png', alt='feature')
+          .col-md-7.col-lg-7
+            .panel
+              .panel-heading
+                //h5 Feature
+                h3.dark Individuelle Customer Journeys
+              .panel-body
+                p.lead.dark
+                  | Smartphones sind Kunden-Touchpoints. Mit <span class="bold">QSC®-airqoo</span> machen wir diese Kontakte mess- und auswertbar. Free-WiFi als Kundenservice anzubieten ist gut, mit <span class="bold">QSC®-airqoo</span> können Sie ihrem Kunden zusätzlich personalisierte Inhalte bieten, die fesseln und begeistern. Der Einkauf wird digital unterstützt und zum Erlebnis.
+                p.lead.dark
+                  | Das <span class="bold">airqoo® GATEWAY</span> liefert Ihnen umfangreiche Analysen und Statistiken bezogen auf das Nutzerverhalten ihrer <span class="bold">airqoo® WiFi Lösung</span> - in Echtzeit.
+
+                h4.dark Das ist Einkaufen in der Zukunft.
+
+                .featureIcon(data-hint='VoIP Shoptelefonie')
+                  a(href='#', data-toggle='tooltip', data-placement='top', title='VoIP Shoptelefonie')
+                    span
+                      img(src='img/svg/150401_AQ_icon_voip.svg', alt='feature')
+                .featureIcon(data-hint='Couponing & Loyalty Integration')
+                  a(href='#', data-toggle='tooltip', data-placement='top', title='Couponing & Loyalty Integration')
+                    span
+                      img(src='img/svg/150401_AQ_icon_couponing.svg', alt='feature')
+                .featureIcon(data-hint='Beacon & Indoor Navigation')
+                  a(href='#', data-toggle='tooltip', data-placement='top', title='Beacon & Indoor Navigation')
+                    span
+                      img(src='img/svg/150401_AQ_icon_beacon.svg', alt='feature')
+                .featureIcon(data-hint='Analytics & Monitoring')
+                  a(href='#', data-toggle='tooltip', data-placement='top', title='Analytics & Monitoring')
+                    span
+                      img(src='img/svg/150401_AQ_icon_analytics.svg', alt='feature')
+            a.forward.btn.btn-primary.btn-responsive(href='#') Mehr Erfahren   
+     
+    #retail_four_Bg.section
+      .container
+        .row
+          .col-md-7.col-lg-7
+            .panel
+              .panel-heading
+                //h5 Feature
+                h3.dark Analytics & Consumer Insights
+              .panel-body
+                p.lead.dark
+                  | Eine zentrale Eigenschaft ist die Darstellung von Nutzerstatistiken und Nutzerverhalten innerhalb Ihrer airqoo-gemanagten WiFi Lösung und das in Echtzeit. Sie haben direkten Zugriff auf die Reporting-Plattform des <span class="bold">airqoo® GATEWAYs</span> und können sich individuelle Reports zusammenstellen und anzeigen lassen.
+                p.lead.dark
+                  | Zusätzlich sendet das <span class="bold">airqoo® GATEWAY</span> automatisch konfigurierbare Berichte zur Nutzeranalyse an ausgewählte Empfänger. Lernen Sie Gewohnheiten Ihrer Kunden kennen und erlangen wichtige Customer-Insights. Automatisch durch die Bereitstellung des <span class="bold">airqoo®-powered WiFi Service</span>.
+
+
+                h4.dark Wir freuen uns auf Ihre Ideen, sprechen Sie uns an!
+
+                .featureIcon(data-hint='Security & Contentfilter')
+                  a(href='#', data-toggle='tooltip', data-placement='top', title='', data-original-title='Security & Contentfilter')
+                    span
+                      img(src='img/svg/150401_AQ_icon_content_filter_safety.svg', alt='feature')
+                .featureIcon(data-hint='Simple & Save Login')
+                  a(href='#', data-toggle='tooltip', data-placement='top', title='', data-original-title='Simple & Save Login')
+                    span
+                      img(src='img/svg/150401_AQ_icon_login.svg', alt='feature')
+                .featureIcon(data-hint='Scalable Plattform')
+                  a(href='#', data-toggle='tooltip', data-placement='top', title='', data-original-title='Scalable Plattform')
+                    span
+                      img(src='img/svg/150401_AQ_icon_platform.svg', alt='feature')
+            a.forward.btn.btn-primary.btn-responsive(href='#') Treten Sie mit uns in Kontakt
+          .col-md-5.col-lg-5.hidden-xs.hidden-sm
+            img.img.img-responsive(src='img/static/retail_feature_analytics.png', alt='feature')
+    
+    div#contactBg.section.last-section
+      #contactFormContainer.container
+        .row
+          .col-md-12
+            .row
+              .col-md-12
+                h3.dark Kontakt
+                p.small Sie haben Fragen, wünschen eine Beratung oder Produktinformationen? Nutzen Sie das Formular für die Kontaktaufnahme mit uns und wir setzen uns schnellstmöglich mit Ihnen in Verbindung. 
+                  span.bold Bitte füllen Sie die mit einem (Pflichtfeld) gekennzeichneten Felder aus. Weitere Angaben helfen uns Ihre Anfrage an den richtigen Gesprächspartner weiterzuleiten. Sämtliche Daten werden streng vertraulich behandelt.
+            include _partials/contact-form-retail.jade      
+      .responsive-footer
+        include _partials/large-footer.jade
+  include _partials/contact-form-modal.jade      
+  button.material-scrolltop(type="button")
+                  
+  
